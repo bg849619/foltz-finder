@@ -516,7 +516,7 @@ export class GuestList {
  {
    "table": "C",
    "guests": 0,
-   "name": "Cassidy Fishbowl"
+   "name": "Cassidy Spurgeon"
  },
  {
    "table": "C",

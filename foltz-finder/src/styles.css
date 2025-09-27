@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --background-tan: rgba(244,239,232);
+    --red-accent: rgba(144,8,25);
+    --font-brown: rgba(84,53,28);
+    --font-brown-light: rgba(157,130,93);
+}
+
+body {
+    background-color: var(--background-tan);
+    margin: 0;
+    padding: 0;
+}
+
+.cursive-header {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-size: 5rem;
+}
+
+.bold-header {
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+h1, h2 {
+    color: var(--red-accent);
+    margin: 0;
+    padding: 0;
+    line-height: 3rem;
+}
+
+p {
+    color: var(--font-brown-light);
+    font-size: 2rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+
+.content {
+    display: block;
+}
+
+header {
+    text-align: center;
+
+}
+
+input[type="text"] {
+    border: 2px solid var(--red-accent);
+    border-radius: 1rem;
+    color: var(--red-accent);
+    background-color: var(--background-tan);
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    align-self: center;
+    width: 25rem;
+}
+
+table {
+    width: 25rem;
+    align-self: center;
+    font-size: 1.75rem;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 0.75rem;
+    border: 1px solid var(--font-brown-light);
+    color: var(--font-brown);
+}

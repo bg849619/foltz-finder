@@ -1,0 +1,23 @@
+<div class="finder">
+    <p>Type your name to find your assigned table...</p>
+    <input type="text" placeholder="John Doe..." (input)="searchGuests($event)" [value]="guestQuery" />
+    <table>
+        <tbody>
+            @for (guest of guestSearch; track guest.name) {
+                <tr (click)="selectGuest(guest)">
+                    <td>{{guest.name}}
+                    @if (guest.guests) {
+                        <span class="guests"> +{{guest.guests}}</span>
+                    }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    @if (selectedGuest) {
+        <div class="result">
+            <p class="red">You are seated at table</p>
+            <h1 class="cursive-header">{{ selectedGuest.table }}</h1>
+        </div> 
+    }
+</div>

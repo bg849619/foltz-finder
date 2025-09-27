@@ -281,7 +281,7 @@ export class GuestList {
  {
    "table": "5",
    "guests": 0,
-   "name": "Corey King"
+   "name": "Korey King"
  },
  {
    "table": "5",

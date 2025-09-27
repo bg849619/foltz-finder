@@ -15,9 +15,17 @@
         </tbody>
     </table>
     @if (selectedGuest) {
-        <div class="result">
-            <p class="red">You are seated at table</p>
-            <h1 class="cursive-header">{{ selectedGuest.table }}</h1>
-        </div> 
+    <div class="result">
+        <p class="red">You are seated at table</p>
+        <h1 class="cursive-header">{{ selectedGuest.table }}</h1>
+        <p class="guest-table">You (and any guests) are seated with...</p>
+        @for (guest of tableGuests; track guest.name) {
+            <p class="guest-name">{{ guest.name }}
+            @if (guest.guests) {
+                <span class="guests"> +{{guest.guests}}</span>
+            }
+            </p>
+        }
+    </div> 
     }
 </div>

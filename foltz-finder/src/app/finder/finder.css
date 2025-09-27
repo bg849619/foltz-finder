@@ -29,3 +29,14 @@ span.guests {
     font-size: 1rem;
     font-style: italic;
 }
+
+p.guest-name {
+    font-size: 1.5rem;
+    color: var(--font-brown-light);
+    margin: 0.3rem 0;
+}
+
+p.guest-table {
+    font-size: 2rem;
+    color: var(--font-brown-light);
+}

@@ -10,7 +10,7 @@
 
 .finder > input {
     max-height: 2rem;
-    width: 100%;
+    width: calc(100% - 1rem);
 }
 
 .finder > table {

@@ -4,10 +4,17 @@
     justify-content: center;
     flex-direction: column;
     min-height: 200px;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 .finder > input {
     max-height: 2rem;
+    width: 100%;
+}
+
+.finder > table {
+    max-width: 100%;
 }
 
 .finder h1 {

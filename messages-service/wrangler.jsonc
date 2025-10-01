@@ -4,15 +4,19 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "messages-service",
+	"name": "foltz-messages-service",
 	"main": "src/index.js",
 	"compatibility_date": "2025-10-01",
 	"observability": {
 		"enabled": true
 	},
-	"dev":{
-		"ip":"0.0.0.0"
-	}
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "foltz-messages",
+			"database_id": "11b035d6-b2ab-44b2-8543-19f85dd65ff7"
+		}
+	]
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement

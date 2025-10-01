@@ -7,7 +7,8 @@ import { Guest } from './guest';
 export class GuestList {
   // I am so sorry I did not want to set up a database for this one day.
   // One of the worst possible ways to do this, but idrc. None of this is personal info.
-  public guestList: Guest[] = JSON.parse(`[
+  public guestList: Guest[] = JSON.parse(`
+    [
  {
    "table": "1",
    "guests": 0,
@@ -533,5 +534,6 @@ export class GuestList {
    "guests": 0,
    "name": "Jack Collins"
  }
-]`);
+]
+    `);
 }

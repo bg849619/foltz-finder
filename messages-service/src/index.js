@@ -13,7 +13,11 @@ import { cors } from "hono/cors";
 const app = new Hono();
 app.use("/api/*", cors());
 app.get("/api/messages", async (c) => {
-	return c.json({ messages: ["Hello from Cloudflare Workers!"] });
+	const result = await c.env.DB.prepare("SELECT COUNT(*) as count FROM messages").run();
+	if (!result.success) {
+		return c.json({ error: "Failed to fetch messages" }, 500);
+	}
+	return c.json({success: true, count: result.results[0].count });
 });
 
 app.post("/api/messages", async (c) => {

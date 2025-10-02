@@ -1,0 +1,31 @@
+.message-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-form input[type="text"],
+.message-form textarea,
+.message-form button {
+    margin-bottom: 1rem;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+textarea {
+    height: 300px;
+    resize: vertical;
+}
+
+button {
+    margin-top: 5rem;
+    padding: 1rem;
+    background-color: var(--red-accent);
+    color: rgba(244,239,232);
+}
+
+p.result {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}

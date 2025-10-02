@@ -47,7 +47,8 @@ header {
 
 }
 
-input[type="text"] {
+input[type="text"],textarea, button {
+    display: block;
     border: 2px solid var(--red-accent);
     border-radius: 1rem;
     color: var(--red-accent);

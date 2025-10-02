@@ -1,12 +1,12 @@
+import { provideHttpClient } from '@angular/common/http';
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Finder } from './finder/finder';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Finder],
+  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
   // DUMMY DATA

@@ -1,0 +1,14 @@
+<header>
+    <a href="/message">
+        <div class="popup" [ngClass]="showMessagePopup ? 'show' : ''">
+            <h2>Psst...</h2>
+            <p>Click here to write a message to the newlyweds<br>
+                <span class="subscript">(You can return here later to write a message...)</span>
+            </p>
+        </div>
+    </a>
+    <img src="/logo.png" />
+      <h1 class="cursive-header">Welcome to</h1>
+      <h1 class="bold-header">our wedding</h1>
+</header>
+<app-finder (guestSelected)="onGuestSelected($event)"></app-finder>

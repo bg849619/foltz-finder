@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { Guest } from '../guest';
 import { GuestList } from '../guest-list';
 
@@ -15,6 +15,8 @@ export class Finder {
   public selectedGuest: Guest | null = null;
   public guestList: Guest[] = [];
 
+  @Output() guestSelected = new EventEmitter<Guest>();
+
   constructor(private guestListService: GuestList) { 
     this.guestList = this.guestListService.guestList;
   }
@@ -24,6 +26,7 @@ export class Finder {
     this.guestQuery = guest.name;
     this.tableGuests = this.guestList.filter(g => g.table === guest.table && g.name !== guest.name);
     this.guestSearch = [];
+    this.guestSelected.emit(guest);
   }
 
   searchGuests(event: any) {

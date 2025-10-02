@@ -12,7 +12,6 @@ import { cors } from "hono/cors";
 
 const app = new Hono();
 app.use("/api/*", cors());
-
 app.get("/api/messages", async (c) => {
 	return c.json({ messages: ["Hello from Cloudflare Workers!"] });
 });
